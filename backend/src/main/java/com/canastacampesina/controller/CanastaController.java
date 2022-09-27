@@ -42,7 +42,19 @@ public class CanastaController {
                 break;
             }
         }
-
         return compra;
     } 
+
+    public boolean venderProducto(int id, int cantidadVenta){
+        boolean venta = false;
+        for (int i=0; i<productos.size(); i++){
+            if (productos.get(i).getIdProducto()==id){
+                productos.get(i).setCantidadProducto(productos.get(i).getCantidadProducto()+cantidadVenta);
+                venta = true;
+                break;
+            }
+        
+        }
+        return venta;
+    }
 }
