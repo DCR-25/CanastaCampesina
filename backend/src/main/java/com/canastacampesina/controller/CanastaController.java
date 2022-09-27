@@ -2,18 +2,16 @@ package com.canastacampesina.controller;
 
 import java.util.ArrayList;
 
+import org.apache.coyote.http11.filters.IdentityOutputFilter;
+
 import com.canastacampesina.model.Canasta;
 
 public class CanastaController {
     
-    private ArrayList<Canasta> productos;
+    public ArrayList<Canasta> productos;
 
     public CanastaController(){
         productos= new ArrayList<Canasta>();
-    }
-
-    public int cantidadProductos(){
-        return productos.size();
     }
 
     public boolean crearProducto(int idProducto, String nombreProducto, int cantidadProducto){
@@ -36,4 +34,16 @@ public class CanastaController {
         }
         return info;    
     }
+
+    public boolean comprarProducto(int id, int cantidadCompra){
+        boolean compra=false;
+        for (int i=0; i<productos.size(); i++){
+            if (productos.get(i).getIdProducto().equalsIgnoreCase(id)){
+                productos.get(i).setCantidadProducto(productos.get(i).getCantidadProducto()-cantidadCompra);
+                break;
+            }
+        }
+
+        return compra;
+    } 
 }

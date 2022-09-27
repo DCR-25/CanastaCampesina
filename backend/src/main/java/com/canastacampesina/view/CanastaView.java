@@ -35,7 +35,7 @@ public class CanastaView {
 
     public void mostrarProductos(){
         String mensaje= "\n\n ------PRODUCTOS REGISTRADOS-----\n";  
-        for (int i=0; i<cController.cantidadProductos(); i++){
+        for (int i=0; i<cController.productos.size(); i++){
             mensaje+=cController.consultarProductos(i);
         } 
         System.out.println(mensaje);
@@ -58,7 +58,6 @@ public class CanastaView {
                     crearProducto(sc);
                     break;
                 case 2:
-                    cController.cantidadProductos();
                     mostrarProductos();
                 default:
                     break;
