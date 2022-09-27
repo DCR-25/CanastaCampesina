@@ -34,17 +34,17 @@ public class CanastaView {
     }
 
     public void mostrarProductos(){
-        CanastaController prueba = new CanastaController();
-        String mensaje= "\n\n ------PRODUCTOS REGISTRADOS-----\n";
-        for (int i=0; i<cController.productos.size; i++){
+        String mensaje= "\n\n ------PRODUCTOS REGISTRADOS-----\n";  
+        for (int i=0; i<cController.cantidadProductos(); i++){
             mensaje+=cController.consultarProductos(i);
-        }
-        println
+        } 
+        System.out.println(mensaje);
     }
 
     public void menu() {
         String mensaje = "----------------CANASTA CAMPESINA------------\n";
         mensaje += "1) Crear producto\n";
+        mensaje += "2) Mostrar productos\n";
         mensaje += "-1) Salir\n";
         mensaje += ">>> ";
         int opc = 0;
@@ -57,6 +57,9 @@ public class CanastaView {
                 case 1:
                     crearProducto(sc);
                     break;
+                case 2:
+                    cController.cantidadProductos();
+                    mostrarProductos();
                 default:
                     break;
             }

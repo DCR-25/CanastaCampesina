@@ -8,14 +8,24 @@ public class CanastaController {
     
     private ArrayList<Canasta> productos;
 
+    public CanastaController(){
+        productos= new ArrayList<Canasta>();
+    }
+
+    public int cantidadProductos(){
+        return productos.size();
+    }
+
     public boolean crearProducto(int idProducto, String nombreProducto, int cantidadProducto){
         boolean create=false;
         try {
             Canasta canasta = new Canasta(idProducto, nombreProducto, cantidadProducto);
-            create=true;            
+            create=true;    
+            productos.add(canasta);        
         } catch (Exception e) {
             // TODO: handle exception
         }
+        
         return create;
     }
 

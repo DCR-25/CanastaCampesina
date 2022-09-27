@@ -5,9 +5,6 @@ public class Canasta {
     private String nombreProducto;
     private int cantidadProducto;
 
-    public Canasta(){
-
-    }
 
     public Canasta(int idProducto, String nombreProducto, int cantidadProducto){
         this.idProducto=idProducto; 
@@ -17,7 +14,7 @@ public class Canasta {
 
     @Override
     public String toString() {
-        String info = "-----------" + idProducto + "------------\n";
+        String info = "----------- ID:" + idProducto + "------------\n";
         info += "Nombre del prodecto: " + nombreProducto;
         info += "\nCantidad disponible: " + cantidadProducto;
         info += "\n--------------------------------------------------------\n";
