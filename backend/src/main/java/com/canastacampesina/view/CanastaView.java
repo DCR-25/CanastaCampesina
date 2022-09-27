@@ -13,7 +13,7 @@ public class CanastaView {
     } 
     
     public void crearProducto(Scanner sc){
-        System.out.println("\n---------------CREAR PRODUCTO--------------\n");
+        System.out.println("\n---------------CREAR PRODUCTO-------------");
         System.out.println("Ingrese la siguiente informacion: ");
         // ------------Solicitar datos al usuario------------
         // Solicitar id

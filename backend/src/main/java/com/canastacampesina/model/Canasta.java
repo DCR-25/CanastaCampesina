@@ -14,7 +14,8 @@ public class Canasta {
 
     @Override
     public String toString() {
-        String info = "----------- ID:" + idProducto + "------------\n";
+        String info = "\n-------------------------------------------\n";
+        info += "----------- ID:" + idProducto + "------------\n";
         info += "Nombre del prodecto: " + nombreProducto;
         info += "\nCantidad disponible: " + cantidadProducto;
         info += "\n--------------------------------------------------------\n";
