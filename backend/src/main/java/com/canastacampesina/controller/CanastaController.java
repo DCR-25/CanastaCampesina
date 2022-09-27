@@ -2,7 +2,6 @@ package com.canastacampesina.controller;
 
 import java.util.ArrayList;
 
-import org.apache.coyote.http11.filters.IdentityOutputFilter;
 
 import com.canastacampesina.model.Canasta;
 
@@ -21,7 +20,6 @@ public class CanastaController {
             create=true;    
             productos.add(canasta);        
         } catch (Exception e) {
-            // TODO: handle exception
         }
         
         return create;
@@ -38,8 +36,9 @@ public class CanastaController {
     public boolean comprarProducto(int id, int cantidadCompra){
         boolean compra=false;
         for (int i=0; i<productos.size(); i++){
-            if (productos.get(i).getIdProducto().equalsIgnoreCase(id)){
+            if (productos.get(i).getIdProducto()==id){
                 productos.get(i).setCantidadProducto(productos.get(i).getCantidadProducto()-cantidadCompra);
+                compra = true;
                 break;
             }
         }

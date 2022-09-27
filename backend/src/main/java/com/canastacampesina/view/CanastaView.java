@@ -41,10 +41,22 @@ public class CanastaView {
         System.out.println(mensaje);
     }
 
+    public void comprarProducto(Scanner sc){
+        System.out.println("\n------------COMPRAR PRODUCTO-----------\n");
+        System.out.print("Ingrese el id del producto a comprar: ");
+        int id = sc.nextInt();
+        System.out.print("Ingrese la cantidad a comprar");
+        int cantidadCompra=sc.nextInt();
+        cController.comprarProducto(id, cantidadCompra);
+        System.out.println("\n---COMPRA REALIZADA CON EXITO----\n");
+
+    }
+
     public void menu() {
         String mensaje = "----------------CANASTA CAMPESINA------------\n";
         mensaje += "1) Crear producto\n";
         mensaje += "2) Mostrar productos\n";
+        mensaje += "3) Comprar producto\n";
         mensaje += "-1) Salir\n";
         mensaje += ">>> ";
         int opc = 0;
@@ -61,6 +73,8 @@ public class CanastaView {
                     mostrarProductos();
                 default:
                     break;
+                case 3:
+                    comprarProducto(sc);
             }
         }
     }
