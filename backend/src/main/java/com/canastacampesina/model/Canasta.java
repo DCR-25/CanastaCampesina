@@ -15,6 +15,15 @@ public class Canasta {
         this.cantidadProducto=cantidadProducto;
     }
 
+    @Override
+    public String toString() {
+        String info = "-----------" + idProducto + "------------\n";
+        info += "Nombre del prodecto: " + nombreProducto;
+        info += "\nCantidad disponible: " + cantidadProducto;
+        info += "\n--------------------------------------------------------\n";
+        return info;
+    }
+
     public int getIdProducto() {
         return idProducto;
     }
