@@ -1,4 +1,4 @@
-package com.backend;
+package com.canastacampesina;
 
 import static org.junit.Assert.assertTrue;
 
