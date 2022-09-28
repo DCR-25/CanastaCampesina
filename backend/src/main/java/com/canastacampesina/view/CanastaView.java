@@ -30,7 +30,7 @@ public class CanastaView {
         sc.nextLine();
         // CREAR PRODUCTO
         cController.crearProducto(idProducto, nombreProducto, cantidadProducto);
-        System.out.println("\n\nUNIVERSIDAD CREADA CON EXITO 💪 👊\n\n");
+        System.out.println("\n\nPRODUCTO CREADO CON EXITO 💪 👊\n\n");
     }
 
     public void mostrarProductos(){
@@ -66,7 +66,7 @@ public class CanastaView {
         mensaje += "1) Crear producto\n";
         mensaje += "2) Mostrar productos\n";
         mensaje += "3) Comprar producto\n";
-        mensaje += "4) Vender producto\n";        
+        mensaje += "4) Vender producto\n";     
         mensaje += "-1) Salir\n";
         mensaje += ">>> ";
         int opc = 0;
