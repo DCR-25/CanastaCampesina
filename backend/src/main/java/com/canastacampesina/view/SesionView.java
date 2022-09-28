@@ -30,10 +30,21 @@ public class SesionView {
         System.out.println("\n\nUSUARIO CREADO CON EXITO 💪 👊\n\n");
     }
 
+    public void login(Scanner sc){
+        System.out.println("\n--------------LOGIN--------------");
+        System.out.print("\nIngrese su usuario: ");
+        String usuario=sc.nextLine();
+        sc.nextLine();
+        System.out.print("\nIngrese su contraseña: ");
+        String contrasena=sc.nextLine();
+        sController.login(usuario, contrasena);
+    }
+
 
     public void menu() {
         String mensaje = "----------------PANEL USUARIOS------------\n";
-        mensaje += "1) Crear usuario\n";  
+        mensaje += "1) Crear usuario\n";
+        mensaje += "2) Autentificacion\n";  
         mensaje += "-1) Salir\n";
         mensaje += ">>> ";
         int opc = 0;
@@ -45,6 +56,10 @@ public class SesionView {
             switch (opc) {
                 case 1:
                     crearUsuario(sc);
+                    break;
+                case 2:
+                    login(sc);
+                    break;
             }
         }
     }
