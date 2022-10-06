@@ -3,6 +3,7 @@ package com.canastacampesina.controller;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,6 +36,7 @@ public class SesionController {
     }
 
     @RequestMapping("/login")
+    @CrossOrigin("*")
     public @ResponseBody Map<String, Boolean> login(@RequestParam String usuario, String contrasena){
         return service.login(usuario, contrasena);
     }    

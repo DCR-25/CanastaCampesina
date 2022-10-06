@@ -12,6 +12,8 @@ body {
 	width: 50%;
 	max-width: 600px;
 	margin: 20px auto;
+	position: relative;
+	left: -250px;
 }
 
 .contenedor article {
@@ -45,8 +47,8 @@ body {
 	transition: .3s ease all;
 	cursor: pointer;
     position: relative;
-    left: 235px;
-    top: 0px;
+    left: -10px;
+    top: -70px;
 }
 
 .contenedor article .btn-abrir-popup:hover {
