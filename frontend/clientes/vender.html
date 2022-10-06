@@ -24,7 +24,7 @@
     <div class="menu__side" id="menu_side">
         <div class="name__page">
             <i class="fa-solid fa-s"></i>
-           <h1>SuperC</h1>
+            <h1>SuperC</h1>
         </div>
 
         
@@ -90,56 +90,26 @@
                         <td class="Princ">Unidad</td>
                         </tr>
         
-                        <tr clase=Principal>
-                            <td class="Principal">12</td>
-                            <td class="Principal">Manzana</td>
-                            <td class="Principal">Fruta</td>
-                            <td class="Principal">4000</td>
-                            <td class="Principal">79</td>
-                            </tr>
+                        <tbody id="tbody"></tbody>
         
                             
                         </table>
         
                         <button id="btn-abrir-popup" class="btn-abrir-popup">Vender</button>     
-        
-                             
-            <!--
-                <% for(var i=0; i < data.length; i++) { %>
-                    <tr>
-                        <td><%= data[i].id_producto %></td>
-                        <td><%= data[i].nombre %></td>
-                        <td><%= data[i].categoria%></td>
-                        <td><%= data[i].precio %></td>
-                        <td><%= data[i].cantidad %></td>
-                    </tr>
-                 <% } %>
-            -->
-        
+
             </article>
         
-                 
         
             <div class="overlay" id="overlay">
                 <div class="popup" id="popup">
                     <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                     <h3>Vender producto</h3>
-                    <form method="POST" action="" >
+                    <form mid="form" onsubmit="vender(event)">
                         <div class="contenedor-inputs">
                             <P class="parrafo">Selecciona un producto para vender</P>
-                            <br>
-                            <select name='comptra' class="seleccion" id='select' >
-        
-                                <option > Producto 1</option>
-                                <option > Producto 2</option>
-                                <option > Producto 3</option>
-                            <!--
-                                <% for(var i=0; i < data.length; i++) { %>
-                                    <option value= "<%= data[i].id_servicio %>" > <%= data[i].nombre %></option>
-                                <% } %>
-                            -->    
-                            <input type="text" placeholder="Cantidad" name="Cantidad">
-        
+                            <select name='idVenta' class="seleccion" id='select'>
+                            </select>
+                            <input type="text" placeholder="Cantidad" name="Cantidad">        
                         </div>
                         <input type="submit" class="btn-submit" value="vender">
                     </form>
@@ -150,5 +120,6 @@
         <script src="../js/popup.js"></script>
 
     </main>
+        <script src="C:\Users\57311\Documents\GitHub\CanastaComplete\frontend\js\compraVenta.js"></script>
 </body>
 </html>

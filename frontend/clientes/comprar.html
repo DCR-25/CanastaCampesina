@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="Es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +13,13 @@
 
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </head>
+
 <body id="body">
-    
+
     <header>
 
         <div class="icon_menu">
-        <i class="fas fa-bars" id="btn_open" ></i>
+            <i class="fas fa-bars" id="btn_open"></i>
 
         </div>
     </header>
@@ -26,57 +28,48 @@
     <div class="menu__side" id="menu_side">
         <div class="name__page">
             <i class="fa-solid fa-s"></i>
-           <h1>SuperC</h1>
+            <h1>SuperC</h1>
         </div>
 
-        
+
         <div class="options__menu">
             <ul class="tabs">
                 <li><a href="inicioBienvenida.html" class="selected">
-                <div class="option">
-                    <i class="fas fa-home" title="Bienvenido"></i>
-                    <h4>Bienvenido</h4>
+                        <div class="option">
+                            <i class="fas fa-home" title="Bienvenido"></i>
+                            <h4>Bienvenido</h4>
 
-                </div>
-            </a></li>
+                        </div>
+                    </a></li>
 
 
-            <li><a href="comprar.html">
-                <div class="option">
-                    <i class="fa-solid fa-cart-shopping" id="btn_ini"></i>
-                    <h4>Comprar productos</h4>
-                    
-                </div>
-            </a></li>
+                <li><a href="comprar.html">
+                        <div class="option">
+                            <i class="fa-solid fa-cart-shopping" id="btn_ini"></i>
+                            <h4>Comprar productos</h4>
 
-            <li><a href="vender.html">
-                <div class="option">
-                    <i class="fa-solid fa-info"></i>
-                    <h4>Vender productos</h4>
-                    
-                </div>
-            </a></li>
+                        </div>
+                    </a></li>
 
-        
+                <li><a href="vender.html">
+                        <div class="option">
+                            <i class="fa-solid fa-info"></i>
+                            <h4>Vender productos</h4>
 
-            <li><a href="../vistasIniciales/inicio.html">
-                <div class="option">
-                    <i class="fa-sharp fa-solid fa-right-from-bracket"></i>
-                    <h4>Salir</h4>
-                    
-                </div>
-            </a></li>
-
-           
-
-        
+                        </div>
+                    </a></li>
 
 
 
+                <li><a href="../vistasIniciales/inicio.html">
+                        <div class="option">
+                            <i class="fa-sharp fa-solid fa-right-from-bracket"></i>
+                            <h4>Salir</h4>
 
-        </ul>
+                        </div>
+                    </a></li>
 
-
+            </ul>
 
         </div>
     </div>
@@ -87,77 +80,49 @@
 
         <div class="contenedor">
 
-    <article id="tab1">
-        <h1>PRODUCTOS</h1>
-    <h2>En esta sección se podrá ver los productos, en el botón comprar se <br> desplegará una ventana para escoger el producto que desees.</h2>
-        <table class="content-table">
-            <tr clase="rose">
-                <td class="Princ">ID</td>
-                <td class="Princ">Nombre</td>
-                <td class="Princ">Categoria</td>
-                <td class="Princ">Precio</td>
-                <td class="Princ">Unidad</td>
-                </tr>
-
-                <tr clase=Principal>
-                    <td class="Principal">1234</td>
-                    <td class="Principal">ckdkd</td>
-                    <td class="Principal">snkaksd</td>
-                    <td class="Principal">34</td>
-                    <td class="Principal">45</td>
+            <article id="tab1">
+                <h1>PRODUCTOS</h1>
+                <h2>En esta sección se podrá ver los productos, en el botón comprar se <br> desplegará una ventana para
+                    escoger el producto que desees.</h2>
+                <table class="content-table">
+                    <tr clase="rose">
+                        <td class="Princ">ID</td>
+                        <td class="Princ">Nombre</td>
+                        <td class="Princ">Categoria</td>
+                        <td class="Princ">Precio</td>
+                        <td class="Princ">Unidad</td>
                     </tr>
-
-                    
+                    <tbody id="tbody"></tbody>
                 </table>
 
-                <button id="btn-abrir-popup" class="btn-abrir-popup">Comprar</button>     
+                <button id="btn-abrir-popup" class="btn-abrir-popup">Comprar</button>
 
-                     
-    <!--
-        <% for(var i=0; i < data.length; i++) { %>
-            <tr>
-                <td><%= data[i].id_producto %></td>
-                <td><%= data[i].nombre %></td>
-                <td><%= data[i].categoria%></td>
-                <td><%= data[i].precio %></td>
-                <td><%= data[i].cantidad %></td>
-            </tr>
-         <% } %>
-    -->
+            </article>
 
-    </article>
+            <div class="overlay" id="overlay">
+                <div class="popup" id="popup">
+                    <a href="../clientes/comprar.html" id="btn-cerrar-popup" class="btn-cerrar-popup"><i
+                            class="fas fa-times"></i></a>
+                    <h3>Comprar producto</h3>
+                    <form id="form" onsubmit="comprar(event)">
+                        <div class="contenedor-inputs">
+                            <P class="parrafo">Selecciona un producto para comprar</P>
+                            <br>
+                            <select name='idCompra' class="seleccion" id='select'>
+                            </select>
+                            <input type="text" placeholder="Cantidad" name="Cantidad">
 
-         
-
-    <div class="overlay" id="overlay">
-        <div class="popup" id="popup">
-            <a href="../clientes/comprar.html" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-            <h3>Comprar producto</h3>
-            <form method="POST" action="" >
-                <div class="contenedor-inputs">
-                    <P class="parrafo">Selecciona un producto para comprar</P>
-                    <br>
-                    <select name='comptra' class="seleccion" id='select' >
-
-                        <option > Producto 1</option>
-                        <option > Producto 2</option>
-                        <option > Producto 3</option>
-                    <!--
-                        <% for(var i=0; i < data.length; i++) { %>
-                            <option value= "<%= data[i].id_servicio %>" > <%= data[i].nombre %></option>
-                        <% } %>
-                    -->    
-                    <input type="text" placeholder="Cantidad" name="Cantidad">
-
+                        </div>
+                        <input type="submit" class="btn-submit" value="Comprar">
+                    </form>
                 </div>
-                <input type="submit" class="btn-submit" value="Comprar">
-            </form>
+            </div>
         </div>
-    </div>
-</div>
 
-<script src="../js/popup.js"></script>
+        <script src="../js/popup.js"></script>
 
     </main>
+    <script src="C:\Users\57311\Documents\GitHub\CanastaComplete\frontend\js\compraVenta.js"></script>
 </body>
+
 </html>

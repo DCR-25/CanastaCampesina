@@ -3,7 +3,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.Session;
 
-
 import com.canastacampesina.model.Sesion;
 
 import java.util.ArrayList;

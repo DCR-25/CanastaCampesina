@@ -83,6 +83,5 @@ public class Canasta {
 
     public void setPrecioProducto(float precioProducto) {
         this.precioProducto = precioProducto;
-    }
-    
+    }    
 }
